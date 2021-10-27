@@ -68,7 +68,7 @@ AppAsset::register($this);
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
                                 <?= empty($user->photo) ?
-                                    Html::img('@web/files/images/admin_images/' . $photo, ['class' => 'user-image img-circle', 'alt' => 'User Image']) :
+                                    Html::img('@web/files/images/user_images/' . $photo, ['class' => 'user-image img-circle', 'alt' => 'User Image']) :
 
                                     Html::img(\Yii::$app->params['frontendUrl'] . $user->photo, ['class' => 'user-image img-circle', 'alt' => 'User Image']) ?>
 
@@ -80,7 +80,7 @@ AppAsset::register($this);
                                 <li class="user-header">
 
                                     <?= empty($user->photo) ?
-                                        Html::img('@web/files/images/admin_images/' . $photo, ['class' => 'img-circle', 'alt' => 'User Image']) :
+                                        Html::img('@web/files/images/user_images/' . $photo, ['class' => 'img-circle', 'alt' => 'User Image']) :
 
                                         Html::img(\Yii::$app->params['frontendUrl'] . $user->photo, ['class' => 'img-circle', 'alt' => 'User Image']) ?>
 
@@ -119,7 +119,7 @@ AppAsset::register($this);
                 <div class="user-panel">
                     <div class="pull-left image">
                         <?= empty($user->photo) ?
-                            Html::img('@web/files/images/admin_images/' . $photo, ['class' => 'user-image img-circle', 'alt' => 'User Image', 'style' => 'width:60px;height: 60px']) :
+                            Html::img('@web/files/images/user_images/' . $photo, ['class' => 'user-image img-circle', 'alt' => 'User Image', 'style' => 'width:60px;height: 60px']) :
 
                             Html::img(\Yii::$app->params['frontendUrl'] . $user->photo, ['class' => 'user-image img-circle', 'alt' => 'User Image', 'style' => 'width:60px;height: 60px']) ?>
 

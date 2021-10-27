@@ -8,6 +8,7 @@ use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -66,7 +67,26 @@ class UserController extends Controller
     {
         $model = new User();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $passwordHash = Yii::$app->getSecurity()->generatePasswordHash($model->password);
+            $authkey = Yii::$app->security->generateRandomString();
+            $accesToken = Yii::$app->security->generateRandomString();
+
+            $model->password = $passwordHash;
+            $model->authkey = $authkey;
+            $model->accesToken = $accesToken;
+
+            $model->photo = UploadedFile::getInstance($model, 'photo');
+            if ($model->photo) {
+                $photos = $model->photo->name;
+                if ($model->photo->saveAs('files/images/user_images/' . $photos)) {
+                    $model->photo = $photos;
+                }
+            }
+
+            $model->save(false);
+
+            Yii::$app->getSession()->setFlash('success', 'Data Tersimpan');
             return $this->redirect(['view', 'id' => $model->id_user]);
         }
 
@@ -84,9 +104,33 @@ class UserController extends Controller
      */
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $old_photo_user = $model->photo;
+
+        if ($model->load(Yii::$app->request->post())) {
+            $passwordHash = Yii::$app->getSecurity()->generatePasswordHash($model->password);
+            $authkey = Yii::$app->security->generateRandomString();
+            $accesToken = Yii::$app->security->generateRandomString();
+
+            $model->password = $passwordHash;
+            $model->authkey = $authkey;
+            $model->accesToken = $accesToken;
+            
+            $model->photo = UploadedFile::getInstance($model, 'photo');
+            if ($model->photo) {
+                $pp = $model->photo->name;
+                if ($model->photo->saveAs('files/images/user_images/' . $pp)) {
+                    $model->photo = $pp;
+                }
+            }
+            if (empty($model->photo)) {
+                $model->photo = $old_photo_user;
+            }
+            $model->save(false);
+
+            Yii::$app->getSession()->setFlash('success', 'Data Tersimpan');
             return $this->redirect(['view', 'id' => $model->id_user]);
         }
 
