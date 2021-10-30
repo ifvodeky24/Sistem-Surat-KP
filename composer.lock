@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc9980a8a0988c9b358eb5aeba658032",
+    "content-hash": "9a9acd2a35b6c5bf1124285c289ed6db",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -53,7 +53,7 @@
             "version": "3.6.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
             },
             "dist": {
@@ -364,6 +364,122 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/master"
             },
             "time": "2020-06-29T00:56:53+00:00"
+        },
+        {
+            "name": "kartik-v/yii2-krajee-base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-krajee-base.git",
+                "reference": "11365b26ce52294718fa59b7f7cff079fb6ee593"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/11365b26ce52294718fa59b7f7cff079fb6ee593",
+                "reference": "11365b26ce52294718fa59b7f7cff079fb6ee593",
+                "shasum": ""
+            },
+            "suggest": {
+                "yiisoft/yii2-bootstrap": "for Krajee extensions to work with Bootstrap 3.x version",
+                "yiisoft/yii2-bootstrap4": "for Krajee extensions to work with Bootstrap 4.x version"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\base\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "Base library and foundation components for all Yii2 Krajee extensions.",
+            "homepage": "https://github.com/kartik-v/yii2-krajee-base",
+            "keywords": [
+                "base",
+                "extension",
+                "foundation",
+                "krajee",
+                "widget",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/kartik-v/yii2-krajee-base/issues",
+                "source": "https://github.com/kartik-v/yii2-krajee-base/tree/master"
+            },
+            "time": "2021-09-07T09:39:48+00:00"
+        },
+        {
+            "name": "kartik-v/yii2-widget-datepicker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
+                "reference": "f5f8b396cf03d4a383aad5e7b338f8cb065abf66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/f5f8b396cf03d4a383aad5e7b338f8cb065abf66",
+                "reference": "f5f8b396cf03d4a383aad5e7b338f8cb065abf66",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-krajee-base": ">=2.0.0"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\date\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "Enhanced Yii2 wrapper for the bootstrap datepicker plugin (sub repo split from yii2-widgets).",
+            "homepage": "https://github.com/kartik-v/yii2-widget-datepicker",
+            "keywords": [
+                "date",
+                "extension",
+                "form",
+                "jquery",
+                "picker",
+                "plugin",
+                "select2",
+                "widget",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/kartik-v/yii2-widget-datepicker/issues",
+                "source": "https://github.com/kartik-v/yii2-widget-datepicker/tree/v1.4.8"
+            },
+            "time": "2021-10-28T03:58:09+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -919,12 +1035,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "f9d384b98c037f9d3a2296b77eb7ba43bdd928c2"
+                "reference": "777d351177c75b1d12d1d727f0ab05585922601b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f9d384b98c037f9d3a2296b77eb7ba43bdd928c2",
-                "reference": "f9d384b98c037f9d3a2296b77eb7ba43bdd928c2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/777d351177c75b1d12d1d727f0ab05585922601b",
+                "reference": "777d351177c75b1d12d1d727f0ab05585922601b",
                 "shasum": ""
             },
             "require": {
@@ -1034,7 +1150,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-22T06:46:29+00:00"
+            "time": "2021-10-29T20:02:24+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1214,12 +1330,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-                "reference": "e7209bcb87048750bbcb1dbbab21f8500a8ef29b"
+                "reference": "dc5376e47b37af5703ce5da23e1f9ff9944d9c4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/e7209bcb87048750bbcb1dbbab21f8500a8ef29b",
-                "reference": "e7209bcb87048750bbcb1dbbab21f8500a8ef29b",
+                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/dc5376e47b37af5703ce5da23e1f9ff9944d9c4d",
+                "reference": "dc5376e47b37af5703ce5da23e1f9ff9944d9c4d",
                 "shasum": ""
             },
             "require": {
@@ -1292,7 +1408,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-20T07:42:07+00:00"
+            "time": "2021-10-24T20:34:50+00:00"
         }
     ],
     "packages-dev": [
@@ -2510,12 +2626,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae"
+                "reference": "9dc4bb058ffd1f194059f6b099bd6ca9c726aed4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a12f7e301eb7258bb68acd89d4aefa05c2906cae",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/9dc4bb058ffd1f194059f6b099bd6ca9c726aed4",
+                "reference": "9dc4bb058ffd1f194059f6b099bd6ca9c726aed4",
                 "shasum": ""
             },
             "require": {
@@ -2551,9 +2667,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
             },
-            "time": "2021-10-02T14:08:47+00:00"
+            "time": "2021-10-26T18:53:16+00:00"
         },
         {
             "name": "phpspec/php-diff",
@@ -2968,12 +3084,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ab66178ff7df16554a6b478048fa93b216e0cf68"
+                "reference": "ceac4da24110c1e1dc5112822fba24ef6a1dba33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ab66178ff7df16554a6b478048fa93b216e0cf68",
-                "reference": "ab66178ff7df16554a6b478048fa93b216e0cf68",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ceac4da24110c1e1dc5112822fba24ef6a1dba33",
+                "reference": "ceac4da24110c1e1dc5112822fba24ef6a1dba33",
                 "shasum": ""
             },
             "require": {
@@ -3049,7 +3165,7 @@
             },
             "funding": [
                 {
-                    "url": "https://phpunit.de/donate.html",
+                    "url": "https://phpunit.de/sponsors.html",
                     "type": "custom"
                 },
                 {
@@ -3057,7 +3173,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-19T07:42:06+00:00"
+            "time": "2021-10-28T05:30:32+00:00"
         },
         {
             "name": "psr/container",
@@ -3944,7 +4060,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-11-30T07:30:19+00:00"
         },
         {
@@ -4116,12 +4231,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "ec6ea646a4a148d8a7d2f5f7ed7bc0f603cd3090"
+                "reference": "95b8b3c32c5d2311799a16bb4369acccd44b69a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/ec6ea646a4a148d8a7d2f5f7ed7bc0f603cd3090",
-                "reference": "ec6ea646a4a148d8a7d2f5f7ed7bc0f603cd3090",
+                "url": "https://api.github.com/repos/symfony/console/zipball/95b8b3c32c5d2311799a16bb4369acccd44b69a8",
+                "reference": "95b8b3c32c5d2311799a16bb4369acccd44b69a8",
                 "shasum": ""
             },
             "require": {
@@ -4207,7 +4322,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-20T21:47:09+00:00"
+            "time": "2021-10-29T16:09:56+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -4586,12 +4701,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "3d70c86483c61de33232a6197cf84e356f88fdf1"
+                "reference": "e6c34f742f52cf5c6eae814f925d6654fa7603cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/3d70c86483c61de33232a6197cf84e356f88fdf1",
-                "reference": "3d70c86483c61de33232a6197cf84e356f88fdf1",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/e6c34f742f52cf5c6eae814f925d6654fa7603cd",
+                "reference": "e6c34f742f52cf5c6eae814f925d6654fa7603cd",
                 "shasum": ""
             },
             "require": {
@@ -4641,7 +4756,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-04T18:34:22+00:00"
+            "time": "2021-10-27T13:14:56+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -4732,12 +4847,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "16880ba9c5ebe3642d1995ab866db29270b36535"
+                "reference": "5911fe42c266a5917aef12e45fbd3a640a9e3b18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/16880ba9c5ebe3642d1995ab866db29270b36535",
-                "reference": "16880ba9c5ebe3642d1995ab866db29270b36535",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/5911fe42c266a5917aef12e45fbd3a640a9e3b18",
+                "reference": "5911fe42c266a5917aef12e45fbd3a640a9e3b18",
                 "shasum": ""
             },
             "require": {
@@ -4790,7 +4905,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.23.1"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/main"
             },
             "funding": [
                 {
@@ -4806,7 +4921,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T12:26:48+00:00"
+            "time": "2021-10-26T17:12:59+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
@@ -5119,12 +5234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "37db45dab9de8140550389b95099c86af68c4b3e"
+                "reference": "dad92b16d84cb661f39c85a5dbb6e4792b92e90f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/37db45dab9de8140550389b95099c86af68c4b3e",
-                "reference": "37db45dab9de8140550389b95099c86af68c4b3e",
+                "url": "https://api.github.com/repos/symfony/string/zipball/dad92b16d84cb661f39c85a5dbb6e4792b92e90f",
+                "reference": "dad92b16d84cb661f39c85a5dbb6e4792b92e90f",
                 "shasum": ""
             },
             "require": {
@@ -5194,7 +5309,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-13T18:06:36+00:00"
+            "time": "2021-10-28T19:23:26+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -5202,12 +5317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "251888d28bc29dc879fb566bb263f0607bef4f0a"
+                "reference": "c55bc64d9fc7102da2254473a55fa100ddbb746b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/251888d28bc29dc879fb566bb263f0607bef4f0a",
-                "reference": "251888d28bc29dc879fb566bb263f0607bef4f0a",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c55bc64d9fc7102da2254473a55fa100ddbb746b",
+                "reference": "c55bc64d9fc7102da2254473a55fa100ddbb746b",
                 "shasum": ""
             },
             "require": {
@@ -5271,7 +5386,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-20T06:13:37+00:00"
+            "time": "2021-10-26T08:20:39+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -5616,7 +5731,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "kartik-v/yii2-widget-datepicker": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

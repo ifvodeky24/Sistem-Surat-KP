@@ -7,13 +7,11 @@ use yii\widgets\DetailView;
 /* @var $model app\models\User */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Pengguna', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="user-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id_user], ['class' => 'btn btn-primary']) ?>
@@ -26,21 +24,41 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id_user',
-            'username',
-            'password',
-            'email:email',
-            'photo',
-            'name',
-            'authkey',
-            'accesToken',
-            'createdAt',
-            'updatedAt',
-            'id_role',
-        ],
-    ]) ?>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-success">
+                <div class="box-body">
+                    <?= DetailView::widget([
+                        'model' => $model,
+                        'attributes' => [
+                            //'id_user',
+                            'username',
+                            //'password',
+                            'email:email',
+                            [
+                                'attribute' => 'photo',
+                                'value' => function($model){
+                                    //return Html::img(\Yii::$app->params['frontendUrl'] . $model->photo, ['class' => 'img-circle', 'alt' => 'User Image']);
+                                }
+
+                            ],
+                            'name',
+                            //'authkey',
+                            //'accesToken',
+                            'createdAt',
+                            //'updatedAt',
+                            [
+                                'attribute' => 'id_role',
+                                'value' => function($model){
+                                    return $model->role->role_name;
+                                }
+
+                            ]
+                        ],
+                    ]) ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>

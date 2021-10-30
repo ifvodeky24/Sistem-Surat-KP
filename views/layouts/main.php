@@ -83,8 +83,6 @@ AppAsset::register($this);
                                         Html::img('@web/files/images/user_images/' . $photo, ['class' => 'img-circle', 'alt' => 'User Image']) :
 
                                         Html::img(\Yii::$app->params['frontendUrl'] . $user->photo, ['class' => 'img-circle', 'alt' => 'User Image']) ?>
-
-
                                     <p>
                                         <?php echo $name ?>
                                         <small>Selamat Datang <?php echo $name ?></small>
@@ -116,25 +114,9 @@ AppAsset::register($this);
             <section class="sidebar">
                 <!-- Sidebar user panel -->
                 <br>
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <?= empty($user->photo) ?
-                            Html::img('@web/files/images/user_images/' . $photo, ['class' => 'user-image img-circle', 'alt' => 'User Image', 'style' => 'width:60px;height: 60px']) :
-
-                            Html::img(\Yii::$app->params['frontendUrl'] . $user->photo, ['class' => 'user-image img-circle', 'alt' => 'User Image', 'style' => 'width:60px;height: 60px']) ?>
-
-
-                    </div>
-                    <div class="pull-left info">
-                        <p> <?php echo $username ?></p>
-
-                    </div>
-                </div>
 
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
-                    <br>
-                    <li class="header">MAIN NAVIGATION</li>
                     <br>
 
                     <!--  Data Beranda Awal-->

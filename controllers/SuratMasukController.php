@@ -8,6 +8,7 @@ use app\models\SuratMasukSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * SuratMasukController implements the CRUD actions for SuratMasuk model.
@@ -66,8 +67,17 @@ class SuratMasukController extends Controller
     {
         $model = new SuratMasuk();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_surat_masuk]);
+        if ($model->load(Yii::$app->request->post())) {
+            $file = UploadedFile::getInstance($model, 'file_surat');
+            if ($model->validate()){
+                if (!empty($file)) {
+                    $newFileName = Yii::$app->security->generateRandomString().'.'.$file->extension;
+                    $file->saveAs(Yii::$app->basePath.'/uploads/docs/' . $newFileName);
+                    $model->file_surat = $newFileName;
+                    $model->save(false);
+                    return $this->redirect(['view', 'id' => $model->id_surat_masuk]);
+                }
+            }
         }
 
         return $this->render('create', [
@@ -85,9 +95,29 @@ class SuratMasukController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $oldFile = $model->file_surat;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_surat_masuk]);
+        if ($model->load(Yii::$app->request->post())) {
+            $file = UploadedFile::getInstance($model, 'file_surat');
+            $newFileName = Yii::$app->security->generateRandomString().'.'.$file->extension;
+            if ($model->validate()){
+                if (!empty($file)) {
+                    $model->file_surat = $newFileName;
+                }
+                else
+                {
+                    $model->file_surat = $oldFile;
+                }
+                if ($model->save())
+                {
+                    if (isset($file))
+                    {
+                        $file->saveAs(Yii::$app->basePath.'/uploads/docs/' . $newFileName);
+                        unlink(Yii::$app->basePath.'/uploads/docs/'.$oldFile);
+                    }
+                }
+                return $this->redirect(['view', 'id' => $model->id_surat_masuk]);
+            }
         }
 
         return $this->render('update', [
@@ -104,7 +134,10 @@ class SuratMasukController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        unlink(Yii::$app->basePath.'/uploads/docs/'.$model->file_surat);
+
+        $model->delete();
 
         return $this->redirect(['index']);
     }

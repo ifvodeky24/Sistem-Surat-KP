@@ -34,10 +34,11 @@ class SuratKeluar extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nomor_surat', 'tujuan_surat', 'perihal', 'file_surat', 'penerima'], 'required'],
+            [['nomor_surat', 'tujuan_surat', 'perihal', 'penerima'], 'required'],
             [['tanggal_surat', 'tanggal_keluar', 'createdAt', 'updatedAt'], 'safe'],
             [['perihal'], 'string'],
             [['nomor_surat', 'tujuan_surat', 'file_surat', 'penerima'], 'string', 'max' => 50],
+            [['file_surat'],'file','skipOnEmpty'=>true,'extensions'=>'doc, docx, pdf']
         ];
     }
 

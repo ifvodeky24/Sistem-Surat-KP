@@ -18,7 +18,7 @@ class SuratMasukSearch extends SuratMasuk
     {
         return [
             [['id_surat_masuk'], 'integer'],
-            [['nomor_surat', 'tanggal_surat', 'tanggal_terima', 'asal_surat', 'perihal', 'file_surat', 'penerima', 'createdAt', 'updatedAt'], 'safe'],
+            [['nomor_surat', 'tanggal_surat', 'tanggal_terima', 'asal_surat', 'perihal', 'penerima', 'createdAt', 'updatedAt'], 'safe'],
         ];
     }
 

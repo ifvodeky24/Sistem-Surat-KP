@@ -1,19 +1,18 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\SuratMasuk */
 
 $this->title = $model->id_surat_masuk;
-$this->params['breadcrumbs'][] = ['label' => 'Surat Masuks', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Surat Masuk', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="surat-masuk-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id_surat_masuk], ['class' => 'btn btn-primary']) ?>
@@ -24,22 +23,30 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <a href="http://localhost/Sistem-Surat-KP/uploads/docs/<?= $model->file_surat ?>" class="btn btn-warning" target="_blank">Download Surat</a>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id_surat_masuk',
-            'nomor_surat',
-            'tanggal_surat',
-            'tanggal_terima',
-            'asal_surat',
-            'perihal:ntext',
-            'file_surat',
-            'penerima',
-            'createdAt',
-            'updatedAt',
-        ],
-    ]) ?>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-success">
+                <div class="box-body">
+                    <?= DetailView::widget([
+                        'model' => $model,
+                        'attributes' => [
+                            //'id_surat_masuk',
+                            'nomor_surat',
+                            'tanggal_surat',
+                            'tanggal_terima',
+                            'asal_surat',
+                            'perihal:ntext',
+                            'penerima',
+                            //s'createdAt',
+                            //'updatedAt',
+                        ],
+                    ]) ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
