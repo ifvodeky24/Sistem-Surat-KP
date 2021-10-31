@@ -20,6 +20,11 @@ use Yii;
  */
 class SuratMasuk extends \yii\db\ActiveRecord
 {
+
+    public $bulan_awal;
+    public $bulan_akhir;
+    public $jenis_surat;
+
     /**
      * {@inheritdoc}
      */
@@ -52,8 +57,8 @@ class SuratMasuk extends \yii\db\ActiveRecord
             'nomor_surat' => 'Nomor Surat',
             'tanggal_surat' => 'Tanggal Surat',
             'tanggal_terima' => 'Tanggal Terima',
-            'asal_surat' => 'Asal Surat',
-            'perihal' => 'Perihal',
+            'asal_surat' => 'Asal Surat/Pengirim',
+            'perihal' => 'Perihal/Keringkasan Isi',
             'file_surat' => 'File Surat',
             'penerima' => 'Penerima',
             'createdAt' => 'Created At',
