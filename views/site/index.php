@@ -1,14 +1,30 @@
 <?php
 
 /* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
+use scotthuangzl\googlechart\GoogleChart;
+$this->title = 'Sistem Surat';
 ?>
 <div class="site-index">
-
     <div class="jumbotron">
-        <h1>Selamat Datang</h1>
-        <h2>Di Sistem Surat</h2>
+        <h3>Selamat Datang</h3>
+        <h4>Di Sistem Surat</h4>
     </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <?php
+            $suratMasuk = \app\models\SuratMasuk::find()->count();;
+            $suratKeluar = \app\models\SuratKeluar::find()->count();;
+            echo GoogleChart::widget(array('visualization' => 'PieChart',
+                'data' => array(
+                    array('Task', 'Hours per Day'),
+                    array('Jumlah Surat Masuk', $suratMasuk),
+                    array('Jumlah Surat Keluar', $suratKeluar),
+                ),
+                'options' => array('title' => 'Grafik Surat Masuk')));
+            ?>
+        </div>
+    </div>
+
 
 </div>

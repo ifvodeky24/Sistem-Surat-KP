@@ -37,7 +37,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 
-<body class="hold-transition skin-green-light sidebar-mini">
+<body class="hold-transition skin-blue-light sidebar-mini">
     <?php $this->beginBody() ?>
 
 
@@ -94,7 +94,7 @@ AppAsset::register($this);
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <?php echo Html::a('Profil', ['/user/profil'], ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']) ?>
+                                        <!-- <?php echo Html::a('Profil', ['/user/profil'], ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']) ?> -->
                                         <!-- <a href="" class="btn btn-default btn-flat">Profil</a> -->
                                     </div>
                                     <div class="pull-right">
@@ -156,8 +156,8 @@ AppAsset::register($this);
                     </span>
                             </a>
                             <ul class="treeview-menu" style="display: none;">
-                                <li><a href="/Sistem-Surat-KP/web/laporan-masuk/index"><i class="fa fa-circle-o"></i> Surat Masuk</a></li>
-                                <li><a href="/Sistem-Surat-KP/web/laporan-keluar/index"><i class="fa fa-circle-o"></i> Surat Keluar</a></li>
+                                <li><a href="/sistem-surat-sekolah/web/laporan-masuk/index"><i class="fa fa-circle-o"></i> Surat Masuk</a></li>
+                                <li><a href="/sistem-surat-sekolah/web/laporan-keluar/index"><i class="fa fa-circle-o"></i> Surat Keluar</a></li>
                             </ul>
                         </li>
 
