@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="laporan-index">
     <?php $form = ActiveForm::begin(['options'=>['action'=>['/tb-asset/hasil-laporan-masuk'],'target'=>'_blank']]); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-    <br>
+    <br><br>
     <div class="row">
         <div class="col-md-12">
             <div class="box box-success">

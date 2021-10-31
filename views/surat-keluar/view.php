@@ -22,9 +22,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <a href="http://localhost/Sistem-Surat-KP/uploads/docs/<?= $model->file_surat ?>" class="btn btn-warning" target="_blank">Download Surat</a>
+        <a href="http://localhost/sistem-surat-sekolah/uploads/docs/<?= $model->file_surat ?>" class="btn btn-warning" target="_blank">Download Surat</a>
     </p>
 
+    <br><br>
     <div class="row">
         <div class="col-md-12">
             <div class="box box-success">
