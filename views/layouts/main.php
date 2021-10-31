@@ -13,6 +13,7 @@ use app\models\User;
 
 $username = Yii::$app->user->identity->username;
 $id_user = Yii::$app->user->identity->id_user;
+$role = Yii::$app->user->identity->id_role;
 $photo = Yii::$app->user->identity->photo;
 $name = Yii::$app->user->identity->name;
 User::find()
@@ -136,28 +137,47 @@ AppAsset::register($this);
                     <!-- Data Perusahaan Akhir -->
 
                     <!--  Data Trayek Awal-->
+
                     <li>
                         <a href="<?php echo Yii::$app->request->baseUrl; ?>/surat-keluar/index">
                             <i class="fa fa-th-list"></i> <span>Data Surat Keluar</span>
                         </a>
                     </li>
-                    <!-- Data Trayek Akhir -->
 
                     <!--  Data Kondisi Jalan Awal-->
-                    <li>
-                        <a href="<?php echo Yii::$app->request->baseUrl; ?>/user/index">
-                            <i class="fa fa-road"></i> <span>Data User</span>
-                        </a>
-                    </li>
-                    <!-- Data Kondisi Jalan Akhir -->
+                    <?php if ($role == 1){ ?>
 
-                    <!--  Data Jadwal Awal-->
-                    <li>
-                        <a href="<?php echo Yii::$app->request->baseUrl; ?>/role/index">
-                            <i class="fa fa-calendar-times-o"></i> <span>Data Role</span>
-                        </a>
-                    </li>
-                    <!-- Data Jadwal Akhir -->
+                    <!-- Data Trayek Akhir -->
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-book"></i> <span>Laporan</span>
+                            <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                            </a>
+                            <ul class="treeview-menu" style="display: none;">
+                                <li><a href="/Sistem-Surat-KP/web/laporan-masuk/index"><i class="fa fa-circle-o"></i> Surat Masuk</a></li>
+                                <li><a href="/Sistem-Surat-KP/web/laporan-keluar/index"><i class="fa fa-circle-o"></i> Surat Keluar</a></li>
+                            </ul>
+                        </li>
+
+                        <!--  Data Trayek Awal-->
+
+                        <li>
+                            <a href="<?php echo Yii::$app->request->baseUrl; ?>/user/index">
+                                <i class="fa fa-road"></i> <span>Data User</span>
+                            </a>
+                        </li>
+                        <!-- Data Kondisi Jalan Akhir -->
+
+                        <!--  Data Jadwal Awal-->
+                        <li>
+                            <a href="<?php echo Yii::$app->request->baseUrl; ?>/role/index">
+                                <i class="fa fa-calendar-times-o"></i> <span>Data Role</span>
+                            </a>
+                        </li>
+                        <!-- Data Jadwal Akhir -->
+                    <?php } ?>
 
                 </ul>
             </section>
@@ -205,7 +225,7 @@ AppAsset::register($this);
             <div class="pull-right hidden-xs">
                 <b>Version</b> 2.4.0
             </div>
-            <strong>Copyright &copy; <?php echo date('Y') ?> <a href="https://adminlte.io">PT.Kunango Jantan</a>.</strong>
+            <strong>Copyright &copy; <?php echo date('Y') ?> <a href="#">SMA 1 Bagan SInembah</a>.</strong>
         </footer>
 
         <div class="control-sidebar-bg"></div>

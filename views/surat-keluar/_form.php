@@ -12,12 +12,12 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-    <div class="row">
-        <!-- left column -->
-        <div class="col-md-12">
-            <!-- Form Element sizes -->
-            <div class="box box-success">
-                <div class="box-body">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- Form Element sizes -->
+                <div class="box box-success">
+                    <div class="box-body">
 
                     <?= $form->field($model, 'nomor_surat')->textInput(['maxlength' => true]) ?>
 
