@@ -99,9 +99,9 @@ class SuratKeluarController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             $file = UploadedFile::getInstance($model, 'file_surat');
-            $newFileName = Yii::$app->security->generateRandomString().'.'.$file->extension;
             if ($model->validate()){
                 if (!empty($file)) {
+                    $newFileName = Yii::$app->security->generateRandomString().'.'.$file->extension;
                     $model->file_surat = $newFileName;
                 }
                 else
