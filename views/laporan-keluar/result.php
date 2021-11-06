@@ -63,17 +63,12 @@ function tanggal_indo($tanggal_awal, $tanggal_akhir)
 
 <table>
     <tr>
-        <th rowspan="2">No.</th>
-        <th rowspan="2">Tanggal</th>
-        <th rowspan="2">ALAMAT</th>
-        <th rowspan="2">Nomor</th>
-        <th rowspan="2">KERINGKASAN<br>ISI</th>
-        <th colspan="2">Pertalian No.</th>
-        <th rowspan="2">CATATAN</th>
-    </tr>
-    <tr>
-        <th>Terdahulu</th>
-        <th>Berikut</th>
+        <th>No.</th>
+        <th>Tanggal</th>
+        <th>ALAMAT</th>
+        <th>Nomor</th>
+        <th>KERINGKASAN<br>ISI</th>
+        <th>CATATAN</th>
     </tr>
     <?php
 
@@ -84,8 +79,6 @@ function tanggal_indo($tanggal_awal, $tanggal_akhir)
             <td><?php echo $value['tujuan_surat']?></td>
             <td><?php echo $value['nomor_surat']?></td>
             <td><?php echo $value['perihal']?></td>
-            <td></td>
-            <td></td>
             <td><?php echo $value['penerima']?></td>
         </tr>
         <?php

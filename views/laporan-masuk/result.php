@@ -68,7 +68,6 @@ function tanggal_indo($tanggal_awal, $tanggal_akhir)
         <th>Tanggal</th>
         <th>Nomor</th>
         <th>KERINGKASAN ISI</th>
-        <th>Pertalian No.</th>
     </tr>
     <?php
 
@@ -79,7 +78,6 @@ function tanggal_indo($tanggal_awal, $tanggal_akhir)
             <td><?php echo $value['asal_surat']?></td>
             <td><?php echo $value['nomor_surat']?></td>
             <td><?php echo $value['perihal']?></td>
-            <td></td>
         </tr>
         <?php
         $no++; }
