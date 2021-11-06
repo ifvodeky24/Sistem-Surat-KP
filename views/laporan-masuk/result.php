@@ -74,8 +74,8 @@ function tanggal_indo($tanggal_awal, $tanggal_akhir)
     $no=1; foreach ($modelasset as $value) {?>
         <tr>
             <td><?php echo $no; ?></td>
-            <td><?php echo $value['tanggal_surat']?></td>
             <td><?php echo $value['asal_surat']?></td>
+            <td><?php echo $value['tanggal_surat']?></td>
             <td><?php echo $value['nomor_surat']?></td>
             <td><?php echo $value['perihal']?></td>
         </tr>
