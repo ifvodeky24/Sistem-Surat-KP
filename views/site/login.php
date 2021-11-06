@@ -16,7 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php $form = Activeform::begin(['id' => 'login-form']); ?>
             <div class="login-box-body">
                 <div class="login-logo">
-                <a href='#'><b>Sistem <br> </b> Surat</a>
+                <a href='#'><b>Sistem Pengarsipan Surat </b> </a>
+                <p>SMAN 1 Bagan Sinembah</p>
             </div>
 
             <div class="text-center">
@@ -61,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="logo text-center">
                 <br>
-            <p> <b>&copy;Sistem Surat<br> <?=date ('Y') ?></b></p>
+            <p> <b>&copy;Sistem Pengarsipan Surat<br> <?=date ('Y') ?></b></p>
 
         </div>
 

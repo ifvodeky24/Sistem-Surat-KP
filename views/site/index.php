@@ -2,12 +2,12 @@
 
 /* @var $this yii\web\View */
 use scotthuangzl\googlechart\GoogleChart;
-$this->title = 'Sistem Surat';
+$this->title = 'Sistem Pengarsipan Surat';
 ?>
 <div class="site-index">
     <div class="jumbotron">
         <h3>Selamat Datang</h3>
-        <h4>Di Sistem Surat</h4>
+        <h4>Di Sistem Pengarsipan Surat</h4>
     </div>
 
     <div class="row">

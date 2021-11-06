@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\SuratMasuk */
 
 $this->title = 'Buat Surat Masuk';
-$this->params['breadcrumbs'][] = ['label' => 'Tambah Surat Masuk', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Buat Surat Masuk', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="surat-masuk-create">

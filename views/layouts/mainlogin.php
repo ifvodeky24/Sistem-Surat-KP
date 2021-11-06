@@ -20,7 +20,7 @@ AppAsset::register($this);
 	<meta charset="UTF-8">
   <meta charset="<?= Yii::$app->charset ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Sistem Surat</title>
+	<title>Sistem Pengarsipan Surat</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl; ?>/favicon.ico?v=1" type="image/x-icon"/>
 
