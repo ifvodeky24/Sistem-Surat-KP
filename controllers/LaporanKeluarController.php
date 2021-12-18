@@ -44,7 +44,9 @@ class LaporanKeluarController extends Controller
 
 
         $mpdf = new \Mpdf\Mpdf();
-        $mpdf->SetTitle('Laporan');
+        $mpdf->SetTitle('Laporan Surat Keluar');
+        $stylesheet = file_get_contents('http://localhost/sistem-surat-sekolah/web/files/css/reportstyles.css');
+        $mpdf->WriteHTML($stylesheet, \Mpdf\HTMLParserMode::HEADER_CSS);
         $mpdf->WriteHTML($this->renderPartial('result',[
                 'model' => $model,
                 'modelasset' => $modelasset,

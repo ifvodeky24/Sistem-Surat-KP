@@ -1,88 +1,89 @@
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th, td {
-        padding: 5px;
-        /*text-align: left;    */
-    }
-    table {
-        width: 100%;
-    }
-
-</style>
-
-<!-- <label style="font-size:17px;font-family:'Times New Roman', Times, serif;">
-	Barang atau pekerjaan tersebut telah diterima dan diselesaikan dengan baik oleh :
-</label> -->
-
 <?php
-
+use yii\helpers\Html;
 $bulan_awal = Yii::$app->getRequest()->getQueryParam('awal');
 $bulan_akhir = Yii::$app->getRequest()->getQueryParam('akhir');
-$split_awal = explode('-', $bulan_awal);
-
-function tanggal_indo($tanggal_awal, $tanggal_akhir)
-{
-    $bulan = array (1 => 'Januari',
-        'Februari',
-        'Maret',
-        'April',
-        'Mei',
-        'Juni',
-        'Juli',
-        'Agustus',
-        'September',
-        'Oktober',
-        'November',
-        'Desember'
-    );
-    $split_awal = explode('-', $tanggal_awal);
-    $split_akhir = explode('-', $tanggal_akhir);
-    if ((int)$split_awal[1] == (int)$split_akhir[1] ) {
-        return $bulan[(int)$split_awal[1]];
-
-    }else{
-
-        return $bulan[(int)$split_awal[1]]. "-".$bulan[(int)$split_akhir[1]];
-    }
-}
-
-
 ?>
 
-<div id="centrar">
-    <b>
-        <h1 style="text-align: center;font-size:14px;">
-            LAPORAN SURAT KELUAR<br>
-            PER <?= tanggal_indo($bulan_awal, $bulan_akhir) ?> <?= $split_awal[0] ?>
-        </h1>
-    </b>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" context="width=device-width, initial-scale=1">
+    <title>Laporan Surat Keluar</title>
+</head>
+<body>
+
+<div class="kop">
+    <img src="http://localhost/sistem-surat-sekolah/web/files/images/riau.png" width="60" height="80" style="margin-left: 7%">
+    <h1 class="font-provinsi">PEMERINTAH PROVINSI RIAU</h1>
+    <h1 class="font-dinas">DINAS PENDIDIKAN</h1>
+    <h1 class="font-sma">SMA NEGERI 1 BAGAN SINEMBAH</h1>
+
+    <table>
+        <tr>
+            <th> </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>Alamat : Jln. Sisingamangaraja Bagan Batu </td>
+            <td>Kode Pos : 28992</td>
+        </tr>
+
+        <tr>
+            <td>e-mail : <u style="color: #1c00cf">sman1bagansinembah@gmail.com</u></td>
+            <td>Telp/Faq : (0765)5650213</td>
+        </tr>
+
+    </table>
+
+    <table style="margin-top: -5px">
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>NPSN : 10405546</td>
+            <td>NSS : 301091005017</td>
+            <td width="36.5%">NIS : 300170 </td>
+        </tr>
+
+    </table>
+
+    <h2 style="text-align: center; font-size: 11px;">AKREDITASI : A</h2>
+
+    <hr style="margin-top: -0.5%">
+    <div class="box-kop"></div>
+
 </div>
 
-<table>
-    <tr>
-        <th>No.</th>
-        <th>Tanggal</th>
-        <th>ALAMAT</th>
-        <th>Nomor</th>
-        <th>KERINGKASAN<br>ISI</th>
-        <th>CATATAN</th>
-    </tr>
-    <?php
-
-    $no=1; foreach ($modelasset as $value) {?>
+<div class="content">
+    <table>
         <tr>
-            <td><?php echo $no++?></td>
-            <td><?php echo $value['tanggal_surat']?></td>
-            <td><?php echo $value['tujuan_surat']?></td>
-            <td><?php echo $value['nomor_surat']?></td>
-            <td><?php echo $value['perihal']?></td>
-            <td><?php echo $value['penerima']?></td>
+            <th>No.</th>
+            <th>Tanggal</th>
+            <th>ALAMAT</th>
+            <th>Nomor</th>
+            <th>KERINGKASAN<br>ISI</th>
+            <th>CATATAN</th>
         </tr>
         <?php
-        $no++; }
-    ?>
 
-</table>
+        $no=1; foreach ($modelasset as $value) {?>
+            <tr>
+                <td><?php echo $no++?></td>
+                <td><?php echo $value['tanggal_surat']?></td>
+                <td><?php echo $value['tujuan_surat']?></td>
+                <td><?php echo $value['nomor_surat']?></td>
+                <td><?php echo $value['perihal']?></td>
+                <td><?php echo $value['penerima']?></td>
+            </tr>
+            <?php
+            $no++; }
+        ?>
+
+    </table>
+</div>
+
+</body>
+</html>
