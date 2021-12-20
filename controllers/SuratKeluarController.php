@@ -36,12 +36,13 @@ class SuratKeluarController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new SuratKeluarSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $model= (new \yii\db\Query())
+            ->select('*')
+            ->from('tb_surat_keluar')
+            ->all();
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'model'=>$model,
         ]);
     }
 
