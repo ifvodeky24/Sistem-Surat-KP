@@ -36,12 +36,20 @@ $this->params['breadcrumbs'][] = $this->title;
                             'username',
                             //'password',
                             'email:email',
+//                            [
+//                                'attribute' => 'photo',
+//                                'value' => function($model){
+//                                    //return Html::img(\Yii::$app->params['frontendUrl'] . $model->photo, ['class' => 'img-circle', 'alt' => 'User Image']);
+//                                }
+//
+//                            ],
                             [
-                                'attribute' => 'photo',
-                                'value' => function($model){
-                                    //return Html::img(\Yii::$app->params['frontendUrl'] . $model->photo, ['class' => 'img-circle', 'alt' => 'User Image']);
+                                'label'=>'photo',
+                                'format'=>'raw',
+                                'value' => function($data){
+                                    $url = Yii::$app->getHomeUrl()."/files/images/user_images/".$data['photo'];
+                                    return Html::img($url,['alt'=>'Gambar Tidak Ada', 'class'=>'img-circle user-img', 'height'=>'100', 'width'=>'100', 'style'=>'object-fit: cover']);
                                 }
-
                             ],
                             'name',
                             //'authkey',
