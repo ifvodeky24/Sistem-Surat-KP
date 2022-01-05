@@ -36,12 +36,13 @@ class SuratMasukController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new SuratMasukSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $model= (new \yii\db\Query())
+            ->select('*')
+            ->from('tb_surat_masuk')
+            ->all();
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'model'=>$model,
         ]);
     }
 
