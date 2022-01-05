@@ -15,11 +15,11 @@ $this->title = 'Sistem Pengarsipan Surat';
             <?php
             $suratMasuk = \app\models\SuratMasuk::find()->count();;
             $suratKeluar = \app\models\SuratKeluar::find()->count();;
-            echo GoogleChart::widget(array('visualization' => 'PieChart',
+            echo GoogleChart::widget(array('visualization' => 'BarChart',
                 'data' => array(
-                    array('Task', 'Hours per Day'),
-                    array('Jumlah Surat Masuk', $suratMasuk),
-                    array('Jumlah Surat Keluar', $suratKeluar),
+                    array('Task', 'Jumlah'),
+                    array('Jumlah Surat Masuk', (int) $suratMasuk),
+                    array('Jumlah Surat Keluar', (int) $suratKeluar),
                 ),
                 'options' => array('title' => 'Grafik Surat Masuk')));
             ?>
